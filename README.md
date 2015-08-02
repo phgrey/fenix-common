@@ -1,8 +1,6 @@
 # Fenix::Common
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fenix/common`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Some deep tech part of the fenix project. Almost unusable. Please refer to fenix or fenix-client instead
 
 ## Installation
 
@@ -19,6 +17,25 @@ And then execute:
 Or install it yourself as:
 
     $ gem install fenix-common
+
+## The fenix project
+Should be separated into several parts: 
+
++ fenix-client: client part of app runned on the host of interest - collects data and saves it to...
++ fenix-store: db part usable for a single host or by a group of hosts. 
+can be used direct together with fenix-client for a local installs. or can be separated from client 
+part of app (something like my "centralized" commerce install). than client apps will achieve data using ...
++ fenix-transport: data transfer protocols. e.g. fenix-transport/json (something like im doing today)
+formely was designed for communicating between client-server installs, but looks like also can be used for
+communicating in some kind of clusters of ...
++ fenix-cluster: part required for creating clusters. For data storage and some heavy computing - 
+e.g. defining package details by install's title. This is another reason why we need fenix-store in a fenix-client even in 
+client-server installs at least as a caching copy. Looks like this will be a server's choice - will it or not accept 
+unprepared data from clients. 
++ fenix-server: fenix-store + fenix-transport + some server code (rack preferable imho). also can be extended with ...
++ fenix-gui: some tool for displaying nice charts of problems density on a timeline with events marked for a host.
+and any other got/analized info.
++fenix-problem
 
 ## Usage
 

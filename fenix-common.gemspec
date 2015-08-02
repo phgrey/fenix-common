@@ -9,7 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["phgrey"]
   spec.email         = ["phgrey@gmail.com"]
 
-  spec.summary       = %q{Some common for fenix parts classes und functionality}
+  spec.summary       = %q{Common parts of the fenix project}
+  spec.description   = %q{Some deep tech part of the fenix project. Almost unusable. Please refer to fenix or fenix-client instead}
   spec.homepage      = "https://github.com/phgrey/fenix-common"
   spec.license       = "MIT"
 
